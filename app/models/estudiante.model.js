@@ -5,7 +5,7 @@ module.exports = (sequelize, Sequelize) => {
       autoIncrement: true,
       primaryKey: true
     },
-    // 🔹 Campos nuevos
+    
     nombre: {
       type: Sequelize.STRING
     },
