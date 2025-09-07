@@ -12,7 +12,10 @@ exports.create = (req, res) => {
 
     const profesorData = {
         nombre: req.body.nombre,
+        apellido: req.body.apellido,
+        direccion: req.body.direccion,
         email: req.body.email,
+        telefono: req.body.telefono,
         especialidad: req.body.especialidad || null
     
     };

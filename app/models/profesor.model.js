@@ -1,23 +1,29 @@
-
 module.exports = (sequelize, Sequelize) => {
   const Profesor = sequelize.define("profesor", {
     id_profesor: {
       type: Sequelize.INTEGER,
-      primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
+      primaryKey: true
     },
+   
     nombre: {
-      type: Sequelize.STRING,   
-        allowNull: false
+      type: Sequelize.STRING
+    },
+    apellido: {
+      type: Sequelize.STRING
+    },
+    direccion: {
+      type: Sequelize.STRING
     },
     email: {
-      type: Sequelize.STRING,
-        allowNull: false,
+      type: Sequelize.STRING
+    },
+    telefono: {
+      type: Sequelize.STRING
     },
     especialidad: {
-        type: Sequelize.STRING,
-            allowNull: true,
-        },
+      type: Sequelize.STRING
+    }
   });
 
   return Profesor;

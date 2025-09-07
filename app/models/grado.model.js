@@ -1,33 +1,29 @@
-
 module.exports = (sequelize, Sequelize) => {
   const Grado = sequelize.define("grado", {
-
-  id_grado: {
+    id_grado: {
       type: Sequelize.INTEGER,
-        primaryKey: true,
-        autoIncrement: true
+      autoIncrement: true,
+      primaryKey: true
     },
+    // 🔹 Campos nuevos
     id_curso: {
-        type: Sequelize.INTEGER,
-            allowNull: false,
-            references: {       
-                model: 'cursos', // nombre de la tabla referenciada
-                key: 'id_curso'   // columna referenciada
-            },
+      type: Sequelize.INTEGER
     },
-    nota: {
-      type: Sequelize.FLOAT,
-        allowNull: false,
+    zona: {
+      type: Sequelize.INTEGER
     },
-    tipo_evaluacion: {
-        type: Sequelize.STRING,
-            allowNull: true,
-        },
-        fecha: {
-            type: Sequelize.DATE,
-                allowNull: true,
-            },
-
+    parcial1: {
+      type: Sequelize.INTEGER
+    },
+    parcial2: {
+      type: Sequelize.INTEGER
+    },
+    examen: {
+      type: Sequelize.INTEGER
+    },
+    fecha: {
+      type: Sequelize.DATE
+    }
   });
 
   return Grado;

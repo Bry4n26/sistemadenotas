@@ -13,6 +13,9 @@ exports.create = async (req, res) => {
         id_curso: req.body.id_curso,
         nota: req.body.nota,
         tipo_evaluacion: req.body.tipo_evaluacion,
+        parcial1: req.body.parcial1,
+        parcial2: req.body.parcial2,
+        examen: req.body.examen,
         fecha: req.body.fecha,
     };
 
